@@ -16,6 +16,8 @@ jobs:
           python-version: "3.12"
       - name: Collect OpenDota pro matches
         run: python collector.py
+      - name: Produce baseline research report
+        run: python analyze.py
       - uses: actions/upload-artifact@v4
         with:
           name: dota-match-snapshot
